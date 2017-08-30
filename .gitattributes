@@ -1,0 +1,2 @@
+touch .gitattributes
+*.php linguist-language=PHP
