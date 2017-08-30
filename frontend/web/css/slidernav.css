@@ -1,0 +1,40 @@
+
+.container { width: 300px; min-height: 250px; display: block; position: relative; background: #f4f6f0; overflow: hidden; }
+.container ul { list-style: none; }
+.menu { float: left; width: 100%; display: block; overflow:auto; margin-bottom:49px; }
+.menu ul { float: left;  display: block; position: relative; }
+.menu ul li { float: left; width: 100%;  box-shadow:1px 1px 1px #a4a4a4; position:relative; padding-bottom:6px; margin-bottom:10px;}
+.menu ul  li .menu-block {  display: block; border-bottom: 1px solid #f3f3f3; text-transform: capitalize; position:relative; }
+
+.menu ul  li ul{ margin-left:0 !important;}
+.menu ul  li ul li{border-bottom: none; }
+.menu-details{ width:100%; height:60px; background:url(../img/menu-bg.png); position:absolute;z-index:9; bottom:3px;    }
+.menu-details-left{ float:left; width:60%; padding-left:6px;}
+.menu-details-right{ float:right;padding-right:6px;}
+.menu-details-title{ color:#fff;  padding:3px 0; }
+.menu-details-category{ font-size:9px;color:#fff;padding:3px 0;}
+.menu-details-content{font-size:9px;color:#fff;}
+.menu-details-price{color:#fff; font-size:24px; text-align:right; display:block; width:100%;}
+.menu-details-right .num_box{ display:block;}
+.menu .title { padding: 10px 0; text-indent: 10px; color: #fff; width: 100%; float: left; font-weight: bold; text-transform: uppercase; z-index:10;}
+.menu .selected .title { background: #f4f6f0; }
+.menu .title span{ background:#81181d; border-radius:5px; padding:1px 20px;}
+.menu-content{ float:left; color:#707070; margin-left:10px; }
+.menu-content .chief-name{font-size:11px; margin-top:10px;}
+.menu-content .chief-cate{font-size:9px;margin-top:6px; }
+.menu-content .chief-details{font-size:9px; margin-top:10px;}
+
+@media screen and (max-width: 414px){.container .category{position: absolute; left: 0; top: 0;  height: 523px; width:55px; overflow:auto;}}
+@media screen and (max-width: 375px){.container .category{position: absolute; left: 0; top: 0;  height: 467px; width:55px; overflow:auto;}}
+@media screen and (max-width: 360px){.container .category{position: absolute; left: 0; top: 0;  height: 446px; width:55px; overflow:auto;}}
+@media screen and (max-width: 320px){.container .category{position: absolute; left: 0; top: 0;  height: 387px; width:55px; overflow:auto;}}
+.container .category ul { padding: 0; }
+.container .category li{ height:47px; text-align:center;  width:54px; border-bottom:1px solid #81181d; border-top:1px solid #81181d; border-right:1px solid #81181d; margin:2px 0;}
+.container .category li a.active{ background:#81181d; color:#fff;}
+.container .category li a {   text-align: center; color: #2e191e; font-weight: bold; display: block; font-size:10px; cursor: pointer; width:54px; height:47px; }
+.container .category li a img{ width:22px; height:22px; display:block; margin:0 auto; padding-top:5px;}
+.container .category li a span{ line-height:20px;}
+.container #debug { position: absolute; bottom: 0; left: 0; padding: 5px; background: #000; color: #fff; }
+.container .arrow { font-size: 0px; line-height: 0%; width: 0px; border-bottom: 8px solid #fff; border-left: 5px solid #333; border-right: 5px solid #333; position: relative; top: 5px; }
+.container .down { border-bottom: none; border-top: 8px solid #fff; top: 15px; }
+.container .slide-up, .container .slide-down { height: 20px; background: #333; text-align: center; cursor: pointer; float: right; width: 100%; position: relative; }

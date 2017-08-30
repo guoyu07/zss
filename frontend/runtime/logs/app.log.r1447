@@ -1,0 +1,945 @@
+2016-04-08 16:32:21 [127.0.0.1][-][13k6kb6vja4ao1vbus6fgmul46][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'' in D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php:837
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php(837): PDOStatement->execute()
+#1 D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php(373): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\zss\zss319\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#3 D:\zss\zss319\vendor\yiisoft\yii2\db\ActiveQuery.php(300): yii\db\Query->one('<span class="ke...')
+#4 D:\zss\zss319\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#5 D:\zss\zss319\common\models\User.php(63): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#6 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(614): common\models\User::findIdentity('<span class="nu...')
+#7 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(176): yii\web\User->renewAuthStatus()
+#8 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(346): yii\web\User->getIdentity()
+#9 D:\zss\zss319\vendor\yiisoft\yii2\base\Component.php(130): yii\web\User->getIsGuest()
+#10 D:\zss\zss319\frontend\views\layouts\main.php(42): yii\base\Component->__get('<span class="st...')
+#11 D:\zss\zss319\vendor\yiisoft\yii2\base\View.php(325): require('D:\\zss\\zss319\\f...')
+#12 D:\zss\zss319\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#13 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(frontend\controllers\SiteController))
+#14 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(372): yii\base\Controller->renderContent('<span class="st...')
+#15 D:\zss\zss319\frontend\controllers\SiteController.php(75): yii\base\Controller->render('<span class="st...')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 D:\zss\zss319\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#18 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[]')
+#19 D:\zss\zss319\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[]')
+#20 D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#21 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+The SQL being executed was: SELECT * FROM `zss_user` WHERE (`id`=1) AND (`status`=10)' in D:\zss\zss319\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php(373): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\zss\zss319\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#3 D:\zss\zss319\vendor\yiisoft\yii2\db\ActiveQuery.php(300): yii\db\Query->one('<span class="ke...')
+#4 D:\zss\zss319\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#5 D:\zss\zss319\common\models\User.php(63): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#6 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(614): common\models\User::findIdentity('<span class="nu...')
+#7 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(176): yii\web\User->renewAuthStatus()
+#8 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(346): yii\web\User->getIdentity()
+#9 D:\zss\zss319\vendor\yiisoft\yii2\base\Component.php(130): yii\web\User->getIsGuest()
+#10 D:\zss\zss319\frontend\views\layouts\main.php(42): yii\base\Component->__get('<span class="st...')
+#11 D:\zss\zss319\vendor\yiisoft\yii2\base\View.php(325): require('D:\\zss\\zss319\\f...')
+#12 D:\zss\zss319\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#13 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(frontend\controllers\SiteController))
+#14 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(372): yii\base\Controller->renderContent('<span class="st...')
+#15 D:\zss\zss319\frontend\controllers\SiteController.php(75): yii\base\Controller->render('<span class="st...')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 D:\zss\zss319\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#18 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[]')
+#19 D:\zss\zss319\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[]')
+#20 D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#21 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#23 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'id' in 'where clause'
+)
+
+2016-04-08 16:32:20 [127.0.0.1][-][13k6kb6vja4ao1vbus6fgmul46][info][application] $_COOKIE = [
+    'PHPSESSID' => '13k6kb6vja4ao1vbus6fgmul46'
+    '_csrf' => 'b4578f31b5dcd7e3f9745102005882d46ac5c2867813c3297503e94e1af42b9aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sGIqx4FjM6bHd8P12K0oyXv_4rxegfk-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__captcha/public/captcha' => 'wgoex'
+    '__captcha/public/captchacount' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\phpStudy\\php55n;D:\\Program Files\\phpStudy\\MySQL\\bin;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PROGRA~1/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1864'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/frontend/web/index.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '10696'
+    'SCRIPT_FILENAME' => 'D:/zss/zss319/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/zss/zss319'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/zss/zss319'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.zss.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=13k6kb6vja4ao1vbus6fgmul46; _csrf=b4578f31b5dcd7e3f9745102005882d46ac5c2867813c3297503e94e1af42b9aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sGIqx4FjM6bHd8P12K0oyXv_4rxegfk-%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.zss.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460104340.5672
+    'REQUEST_TIME' => 1460104340
+]
+2016-04-08 16:36:54 [127.0.0.1][-][13k6kb6vja4ao1vbus6fgmul46][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'' in D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php:837
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php(837): PDOStatement->execute()
+#1 D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php(373): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\zss\zss319\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#3 D:\zss\zss319\vendor\yiisoft\yii2\db\ActiveQuery.php(300): yii\db\Query->one('<span class="ke...')
+#4 D:\zss\zss319\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#5 D:\zss\zss319\common\models\User.php(63): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#6 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(614): common\models\User::findIdentity('<span class="nu...')
+#7 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(176): yii\web\User->renewAuthStatus()
+#8 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(346): yii\web\User->getIdentity()
+#9 D:\zss\zss319\vendor\yiisoft\yii2\base\Component.php(130): yii\web\User->getIsGuest()
+#10 D:\zss\zss319\frontend\views\layouts\main.php(42): yii\base\Component->__get('<span class="st...')
+#11 D:\zss\zss319\vendor\yiisoft\yii2\base\View.php(325): require('D:\\zss\\zss319\\f...')
+#12 D:\zss\zss319\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#13 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(frontend\controllers\SiteController))
+#14 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(372): yii\base\Controller->renderContent('<span class="st...')
+#15 D:\zss\zss319\frontend\controllers\SiteController.php(75): yii\base\Controller->render('<span class="st...')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 D:\zss\zss319\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#18 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[]')
+#19 D:\zss\zss319\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[]')
+#20 D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#21 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+The SQL being executed was: SELECT * FROM `zss_user` WHERE (`id`=1) AND (`status`=10)' in D:\zss\zss319\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php(373): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\zss\zss319\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#3 D:\zss\zss319\vendor\yiisoft\yii2\db\ActiveQuery.php(300): yii\db\Query->one('<span class="ke...')
+#4 D:\zss\zss319\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#5 D:\zss\zss319\common\models\User.php(63): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#6 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(614): common\models\User::findIdentity('<span class="nu...')
+#7 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(176): yii\web\User->renewAuthStatus()
+#8 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(346): yii\web\User->getIdentity()
+#9 D:\zss\zss319\vendor\yiisoft\yii2\base\Component.php(130): yii\web\User->getIsGuest()
+#10 D:\zss\zss319\frontend\views\layouts\main.php(42): yii\base\Component->__get('<span class="st...')
+#11 D:\zss\zss319\vendor\yiisoft\yii2\base\View.php(325): require('D:\\zss\\zss319\\f...')
+#12 D:\zss\zss319\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#13 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(frontend\controllers\SiteController))
+#14 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(372): yii\base\Controller->renderContent('<span class="st...')
+#15 D:\zss\zss319\frontend\controllers\SiteController.php(75): yii\base\Controller->render('<span class="st...')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 D:\zss\zss319\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#18 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[]')
+#19 D:\zss\zss319\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[]')
+#20 D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#21 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#23 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'id' in 'where clause'
+)
+
+2016-04-08 16:36:53 [127.0.0.1][-][13k6kb6vja4ao1vbus6fgmul46][info][application] $_COOKIE = [
+    'PHPSESSID' => '13k6kb6vja4ao1vbus6fgmul46'
+    '_csrf' => 'b4578f31b5dcd7e3f9745102005882d46ac5c2867813c3297503e94e1af42b9aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sGIqx4FjM6bHd8P12K0oyXv_4rxegfk-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__captcha/public/captcha' => 'wgoex'
+    '__captcha/public/captchacount' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\phpStudy\\php55n;D:\\Program Files\\phpStudy\\MySQL\\bin;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PROGRA~1/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1864'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/frontend/web/index.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '10793'
+    'SCRIPT_FILENAME' => 'D:/zss/zss319/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/zss/zss319'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/zss/zss319'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.zss.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=13k6kb6vja4ao1vbus6fgmul46; _csrf=b4578f31b5dcd7e3f9745102005882d46ac5c2867813c3297503e94e1af42b9aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sGIqx4FjM6bHd8P12K0oyXv_4rxegfk-%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.zss.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460104613.6898
+    'REQUEST_TIME' => 1460104613
+]
+2016-04-08 16:36:56 [127.0.0.1][-][13k6kb6vja4ao1vbus6fgmul46][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'' in D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php:837
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php(837): PDOStatement->execute()
+#1 D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php(373): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\zss\zss319\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#3 D:\zss\zss319\vendor\yiisoft\yii2\db\ActiveQuery.php(300): yii\db\Query->one('<span class="ke...')
+#4 D:\zss\zss319\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#5 D:\zss\zss319\common\models\User.php(63): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#6 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(614): common\models\User::findIdentity('<span class="nu...')
+#7 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(176): yii\web\User->renewAuthStatus()
+#8 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(346): yii\web\User->getIdentity()
+#9 D:\zss\zss319\vendor\yiisoft\yii2\base\Component.php(130): yii\web\User->getIsGuest()
+#10 D:\zss\zss319\frontend\views\layouts\main.php(42): yii\base\Component->__get('<span class="st...')
+#11 D:\zss\zss319\vendor\yiisoft\yii2\base\View.php(325): require('D:\\zss\\zss319\\f...')
+#12 D:\zss\zss319\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#13 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(frontend\controllers\SiteController))
+#14 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(372): yii\base\Controller->renderContent('<span class="st...')
+#15 D:\zss\zss319\frontend\controllers\SiteController.php(75): yii\base\Controller->render('<span class="st...')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 D:\zss\zss319\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#18 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[]')
+#19 D:\zss\zss319\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[]')
+#20 D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#21 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+The SQL being executed was: SELECT * FROM `zss_user` WHERE (`id`=1) AND (`status`=10)' in D:\zss\zss319\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php(373): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\zss\zss319\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#3 D:\zss\zss319\vendor\yiisoft\yii2\db\ActiveQuery.php(300): yii\db\Query->one('<span class="ke...')
+#4 D:\zss\zss319\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#5 D:\zss\zss319\common\models\User.php(63): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#6 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(614): common\models\User::findIdentity('<span class="nu...')
+#7 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(176): yii\web\User->renewAuthStatus()
+#8 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(346): yii\web\User->getIdentity()
+#9 D:\zss\zss319\vendor\yiisoft\yii2\base\Component.php(130): yii\web\User->getIsGuest()
+#10 D:\zss\zss319\frontend\views\layouts\main.php(42): yii\base\Component->__get('<span class="st...')
+#11 D:\zss\zss319\vendor\yiisoft\yii2\base\View.php(325): require('D:\\zss\\zss319\\f...')
+#12 D:\zss\zss319\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#13 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(frontend\controllers\SiteController))
+#14 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(372): yii\base\Controller->renderContent('<span class="st...')
+#15 D:\zss\zss319\frontend\controllers\SiteController.php(75): yii\base\Controller->render('<span class="st...')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 D:\zss\zss319\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#18 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[]')
+#19 D:\zss\zss319\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[]')
+#20 D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#21 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#23 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'id' in 'where clause'
+)
+
+2016-04-08 16:36:56 [127.0.0.1][-][13k6kb6vja4ao1vbus6fgmul46][info][application] $_COOKIE = [
+    'PHPSESSID' => '13k6kb6vja4ao1vbus6fgmul46'
+    '_csrf' => 'b4578f31b5dcd7e3f9745102005882d46ac5c2867813c3297503e94e1af42b9aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sGIqx4FjM6bHd8P12K0oyXv_4rxegfk-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__captcha/public/captcha' => 'wgoex'
+    '__captcha/public/captchacount' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\phpStudy\\php55n;D:\\Program Files\\phpStudy\\MySQL\\bin;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PROGRA~1/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1864'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/frontend/web/index.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '10797'
+    'SCRIPT_FILENAME' => 'D:/zss/zss319/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/zss/zss319'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/zss/zss319'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.zss.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=13k6kb6vja4ao1vbus6fgmul46; _csrf=b4578f31b5dcd7e3f9745102005882d46ac5c2867813c3297503e94e1af42b9aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sGIqx4FjM6bHd8P12K0oyXv_4rxegfk-%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.zss.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460104616.062
+    'REQUEST_TIME' => 1460104616
+]
+2016-04-08 16:37:32 [127.0.0.1][-][13k6kb6vja4ao1vbus6fgmul46][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'' in D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php:837
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php(837): PDOStatement->execute()
+#1 D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php(373): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\zss\zss319\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#3 D:\zss\zss319\vendor\yiisoft\yii2\db\ActiveQuery.php(300): yii\db\Query->one('<span class="ke...')
+#4 D:\zss\zss319\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#5 D:\zss\zss319\common\models\User.php(63): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#6 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(614): common\models\User::findIdentity('<span class="nu...')
+#7 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(176): yii\web\User->renewAuthStatus()
+#8 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(346): yii\web\User->getIdentity()
+#9 D:\zss\zss319\vendor\yiisoft\yii2\base\Component.php(130): yii\web\User->getIsGuest()
+#10 D:\zss\zss319\frontend\views\layouts\main.php(42): yii\base\Component->__get('<span class="st...')
+#11 D:\zss\zss319\vendor\yiisoft\yii2\base\View.php(325): require('D:\\zss\\zss319\\f...')
+#12 D:\zss\zss319\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#13 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(frontend\controllers\SiteController))
+#14 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(372): yii\base\Controller->renderContent('<span class="st...')
+#15 D:\zss\zss319\frontend\controllers\SiteController.php(75): yii\base\Controller->render('<span class="st...')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 D:\zss\zss319\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#18 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[]')
+#19 D:\zss\zss319\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[]')
+#20 D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#21 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+The SQL being executed was: SELECT * FROM `zss_user` WHERE (`id`=1) AND (`status`=10)' in D:\zss\zss319\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 D:\zss\zss319\vendor\yiisoft\yii2\db\Command.php(373): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\zss\zss319\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#3 D:\zss\zss319\vendor\yiisoft\yii2\db\ActiveQuery.php(300): yii\db\Query->one('<span class="ke...')
+#4 D:\zss\zss319\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#5 D:\zss\zss319\common\models\User.php(63): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#6 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(614): common\models\User::findIdentity('<span class="nu...')
+#7 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(176): yii\web\User->renewAuthStatus()
+#8 D:\zss\zss319\vendor\yiisoft\yii2\web\User.php(346): yii\web\User->getIdentity()
+#9 D:\zss\zss319\vendor\yiisoft\yii2\base\Component.php(130): yii\web\User->getIsGuest()
+#10 D:\zss\zss319\frontend\views\layouts\main.php(42): yii\base\Component->__get('<span class="st...')
+#11 D:\zss\zss319\vendor\yiisoft\yii2\base\View.php(325): require('D:\\zss\\zss319\\f...')
+#12 D:\zss\zss319\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#13 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(frontend\controllers\SiteController))
+#14 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(372): yii\base\Controller->renderContent('<span class="st...')
+#15 D:\zss\zss319\frontend\controllers\SiteController.php(75): yii\base\Controller->render('<span class="st...')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 D:\zss\zss319\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#18 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[]')
+#19 D:\zss\zss319\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[]')
+#20 D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#21 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#23 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'id' in 'where clause'
+)
+
+2016-04-08 16:37:32 [127.0.0.1][-][13k6kb6vja4ao1vbus6fgmul46][info][application] $_COOKIE = [
+    'PHPSESSID' => '13k6kb6vja4ao1vbus6fgmul46'
+    '_csrf' => 'b4578f31b5dcd7e3f9745102005882d46ac5c2867813c3297503e94e1af42b9aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sGIqx4FjM6bHd8P12K0oyXv_4rxegfk-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__captcha/public/captcha' => 'wgoex'
+    '__captcha/public/captchacount' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\phpStudy\\php55n;D:\\Program Files\\phpStudy\\MySQL\\bin;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PROGRA~1/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1844'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '10850'
+    'SCRIPT_FILENAME' => 'D:/zss/zss319/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/zss/zss319/frontend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/zss/zss319/frontend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.zss.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=13k6kb6vja4ao1vbus6fgmul46; _csrf=b4578f31b5dcd7e3f9745102005882d46ac5c2867813c3297503e94e1af42b9aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sGIqx4FjM6bHd8P12K0oyXv_4rxegfk-%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.zss.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1460104652.4051
+    'REQUEST_TIME' => 1460104652
+]
+2016-04-08 16:37:46 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "index/index".' in D:\zss\zss319\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('index/index', Array)
+#1 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-04-08 16:37:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '13k6kb6vja4ao1vbus6fgmul46'
+    '_csrf' => 'b4578f31b5dcd7e3f9745102005882d46ac5c2867813c3297503e94e1af42b9aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sGIqx4FjM6bHd8P12K0oyXv_4rxegfk-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__captcha/public/captcha' => 'wgoex'
+    '__captcha/public/captchacount' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\phpStudy\\php55n;D:\\Program Files\\phpStudy\\MySQL\\bin;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PROGRA~1/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1844'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/?r=index/index'
+    'QUERY_STRING' => 'r=index/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '10860'
+    'SCRIPT_FILENAME' => 'D:/zss/zss319/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/zss/zss319/frontend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/zss/zss319/frontend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.zss.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=13k6kb6vja4ao1vbus6fgmul46; _csrf=b4578f31b5dcd7e3f9745102005882d46ac5c2867813c3297503e94e1af42b9aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sGIqx4FjM6bHd8P12K0oyXv_4rxegfk-%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.zss.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1460104666.8309
+    'REQUEST_TIME' => 1460104666
+]
+2016-04-08 16:37:57 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "index/index".' in D:\zss\zss319\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('index/index', Array)
+#1 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-04-08 16:37:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    '_csrf' => 'b4578f31b5dcd7e3f9745102005882d46ac5c2867813c3297503e94e1af42b9aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sGIqx4FjM6bHd8P12K0oyXv_4rxegfk-\";}'
+    'PHPSESSID' => '13k6kb6vja4ao1vbus6fgmul46'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__captcha/public/captcha' => 'wgoex'
+    '__captcha/public/captchacount' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\phpStudy\\php55n;D:\\Program Files\\phpStudy\\MySQL\\bin;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PROGRA~1/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1844'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/?r=index/index'
+    'QUERY_STRING' => 'r=index/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '10865'
+    'SCRIPT_FILENAME' => 'D:/zss/zss319/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/zss/zss319/frontend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/zss/zss319/frontend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.zss.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=b4578f31b5dcd7e3f9745102005882d46ac5c2867813c3297503e94e1af42b9aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sGIqx4FjM6bHd8P12K0oyXv_4rxegfk-%22%3B%7D; PHPSESSID=13k6kb6vja4ao1vbus6fgmul46'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.zss.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1460104677.1715
+    'REQUEST_TIME' => 1460104677
+]
+2016-04-08 16:38:03 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "index/index".' in D:\zss\zss319\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('index/index', Array)
+#1 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-04-08 16:38:03 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    '_csrf' => 'b4578f31b5dcd7e3f9745102005882d46ac5c2867813c3297503e94e1af42b9aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sGIqx4FjM6bHd8P12K0oyXv_4rxegfk-\";}'
+    'PHPSESSID' => '13k6kb6vja4ao1vbus6fgmul46'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__captcha/public/captcha' => 'wgoex'
+    '__captcha/public/captchacount' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\phpStudy\\php55n;D:\\Program Files\\phpStudy\\MySQL\\bin;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PROGRA~1/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1844'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/?r=index/index'
+    'QUERY_STRING' => 'r=index/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '10866'
+    'SCRIPT_FILENAME' => 'D:/zss/zss319/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/zss/zss319/frontend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/zss/zss319/frontend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.zss.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=b4578f31b5dcd7e3f9745102005882d46ac5c2867813c3297503e94e1af42b9aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sGIqx4FjM6bHd8P12K0oyXv_4rxegfk-%22%3B%7D; PHPSESSID=13k6kb6vja4ao1vbus6fgmul46'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.zss.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1460104683.2198
+    'REQUEST_TIME' => 1460104683
+]
+2016-04-08 16:38:05 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "index/index".' in D:\zss\zss319\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('index/index', Array)
+#1 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-04-08 16:38:05 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    '_csrf' => 'b4578f31b5dcd7e3f9745102005882d46ac5c2867813c3297503e94e1af42b9aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sGIqx4FjM6bHd8P12K0oyXv_4rxegfk-\";}'
+    'PHPSESSID' => '13k6kb6vja4ao1vbus6fgmul46'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__captcha/public/captcha' => 'wgoex'
+    '__captcha/public/captchacount' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\phpStudy\\php55n;D:\\Program Files\\phpStudy\\MySQL\\bin;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PROGRA~1/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1844'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/?r=index/index'
+    'QUERY_STRING' => 'r=index/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '10867'
+    'SCRIPT_FILENAME' => 'D:/zss/zss319/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/zss/zss319/frontend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/zss/zss319/frontend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.zss.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=b4578f31b5dcd7e3f9745102005882d46ac5c2867813c3297503e94e1af42b9aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sGIqx4FjM6bHd8P12K0oyXv_4rxegfk-%22%3B%7D; PHPSESSID=13k6kb6vja4ao1vbus6fgmul46'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.zss.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1460104685.891
+    'REQUEST_TIME' => 1460104685
+]
+2016-04-08 16:39:52 [127.0.0.1][-][u6okus3sfam8djg2vu8q5kc8o5][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "index/index".' in D:\zss\zss319\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('index/index', Array)
+#1 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-04-08 16:39:52 [127.0.0.1][-][u6okus3sfam8djg2vu8q5kc8o5][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\phpStudy\\php55n;D:\\Program Files\\phpStudy\\MySQL\\bin;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PROGRA~1/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1844'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=index/index'
+    'QUERY_STRING' => 'r=index/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '10969'
+    'SCRIPT_FILENAME' => 'D:/zss/zss319/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/zss/zss319/frontend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/zss/zss319/frontend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.zss.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.zss.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1460104792.2621
+    'REQUEST_TIME' => 1460104792
+]
+2016-04-08 16:39:54 [127.0.0.1][-][u6okus3sfam8djg2vu8q5kc8o5][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "index/index".' in D:\zss\zss319\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('index/index', Array)
+#1 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-04-08 16:39:54 [127.0.0.1][-][u6okus3sfam8djg2vu8q5kc8o5][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'u6okus3sfam8djg2vu8q5kc8o5'
+    '_csrf' => '2db7d6e4427b16c6b0eb02b9f3aba3e9a404be9cb0521311860aa296ee65adb2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AGeuZDz3bByKwwuzl57FX1FHBlxIo7l3\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\phpStudy\\php55n;D:\\Program Files\\phpStudy\\MySQL\\bin;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PROGRA~1/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1844'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=index/index'
+    'QUERY_STRING' => 'r=index/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '10974'
+    'SCRIPT_FILENAME' => 'D:/zss/zss319/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/zss/zss319/frontend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/zss/zss319/frontend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.zss.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=u6okus3sfam8djg2vu8q5kc8o5; _csrf=2db7d6e4427b16c6b0eb02b9f3aba3e9a404be9cb0521311860aa296ee65adb2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AGeuZDz3bByKwwuzl57FX1FHBlxIo7l3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.zss.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1460104794.2532
+    'REQUEST_TIME' => 1460104794
+]
+2016-04-09 08:14:59 [127.0.0.1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The view file does not exist: D:\zss\zss319\frontend\views\index\menu.php' in D:\zss\zss319\vendor\yiisoft\yii2\base\View.php:226
+Stack trace:
+#0 D:\zss\zss319\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\zss\\zss319\\f...', Array, Object(frontend\controllers\IndexController))
+#1 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(402): yii\base\View->render('menu', Array, Object(frontend\controllers\IndexController))
+#2 D:\zss\zss319\frontend\controllers\IndexController.php(19): yii\base\Controller->renderPartial('menu')
+#3 [internal function]: frontend\controllers\IndexController->actionMenu()
+#4 D:\zss\zss319\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\zss\zss319\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 D:\zss\zss319\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('menu', Array)
+#7 D:\zss\zss319\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('index/menu', Array)
+#8 D:\zss\zss319\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\zss\zss319\frontend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2016-04-09 08:14:59 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/menu'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Program Files\\phpStudy\\php55n;D:\\Program Files\\phpStudy\\MySQL\\bin;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\TortoiseSVN\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PROGRA~1/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1844'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=index/menu'
+    'QUERY_STRING' => 'r=index/menu'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '2858'
+    'SCRIPT_FILENAME' => 'D:/zss/zss319/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/zss/zss319/frontend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/zss/zss319/frontend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.zss.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.zss.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1460160899.379
+    'REQUEST_TIME' => 1460160899
+]

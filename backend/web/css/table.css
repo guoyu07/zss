@@ -1,0 +1,33 @@
+.pagination li{
+	float:left;
+	width:18px;
+	height:18px;
+	padding:2px;
+	margin-left:10px;
+	background-color:#28B779;
+	color:#ddd;
+	text-align:center;
+	cursor:pointer;
+}
+.pagination li a {
+	color:#fff;
+}
+#pagelist{
+	position:absolute;
+	right:100px;
+}
+table{
+	margin-left:70px;
+	margin-top:6px;
+}
+table tr{
+	height:30px;
+}
+table td,th{
+	border:1px solid #ccc;
+	padding:10px;
+}
+
+#tableth th{
+	background-color:#efefef;
+}

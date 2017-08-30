@@ -1,0 +1,52 @@
+@charset "utf-8";
+/*清除默认样式*/
+body,h3,p,img,span,input,form,button{margin:0; padding:0; border:0; list-style:none;}
+input,button{outline:none;}
+body{font-size:12px; font-family: "Arial", "Microsoft Yahei";background:#ebebeb;color:#222;}
+
+/**/
+.top_div{background: #008ead;width: 100%;height: 400px;}
+.login-warp{width: 400px;height:350px;position:absolute;left:50%;top:50%; margin:-200px 0 0 -175px;background:#fff;border: 1px solid rgb(231, 231, 231);text-align: center; border-radius:8px;}
+/*happy*/
+.happy{width: 165px; height: 96px; position: absolute;}
+.tou{width: 97px;height: 92px;background: url("../images/tou.png") no-repeat;position: absolute;top: -87px;left: 140px;}
+.left_hand{width:32px;height: 37px;background: url("../images/left_hand.png") no-repeat;position: absolute;top: -38px;left: 150px;}
+.right_hand{width: 32px;height: 37px;background: url("../images/right_hand.png") no-repeat;position: absolute;top: -38px;right: -64px;}
+.initial_left_hand{width: 30px;height: 20px;background: url("../images/hand.png") no-repeat;position: absolute;top: -12px;left: 100px;}
+.initial_right_hand{width: 30px;height: 20px;background: url("../images/hand.png") no-repeat;position: absolute;top: -12px;right: -112px;}
+.left_handing{width: 30px;height: 20px;background: url("../images/left-handing.png") no-repeat;position: absolute;top: -24px;left: 139px;}
+.right_handinging{width: 30px;height: 20px;background: url("../images/right_handing.png") no-repeat;position: absolute;top: -21px;left: 210px;}
+/*login*/
+.login{padding:40px 0 20px; overflow: hidden;}
+.login p{position: relative; overflow:hidden;}
+.login p.help-block-error{padding:8px 60px;text-align:left;line-height:16px; color:red;}
+.ipt{border: 1px solid #d3d3d3;padding: 10px 10px;width: 292px;border-radius: 4px;padding-left: 35px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s}
+.ipt:focus{border-color: #66afe9;outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);}
+.u_logo,.p_logo{padding: 10px 10px;position: absolute;top:12px;left: 64px;}
+.u_logo{background: url("../images/username.png") no-repeat;}
+.p_logo{background: url("../images/password.png") no-repeat;}
+/*验证码*/
+.iPhone-num{width:292px; overflow: hidden; margin:0 auto;}
+.iPhone-num .ipt{width:100px; float:left;padding:10px;}
+.img-num{ display:block;height:40px; float:left;}
+.img-num img{ display:block;width:100%; cursor: pointer;}
+/*login-btn*/
+.login-btn{height:50px;border-top:1px solid rgb(231, 231, 231);padding-top:20px;}
+.login-btn button{display:inline-block;text-align: center;cursor: pointer;line-height:34px;padding:0 24px;border-radius:4px; color:#fff; font-size:14px;margin:0 10px;}
+.btnY{background:#006ead;}
+.btnX{background:#008ead;}
+#footer {position:fixed;left: 0;bottom: 20px;text-align: center; width:100%;}
+#footer p{text-align: center; width:100%;}
+
+
+
+
+
+
